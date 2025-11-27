@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tinig ng Bayan: Local Political Issues in the Philippines</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f6f9;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a73e8, #0d47a1);
+      color: #fff;
+      padding: 1.2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 { font-size: 1.6rem; margin-bottom: .3rem; }
+    header p { font-size: .9rem; opacity: .9; }
+
+    /* --- NAVBAR --- */
+    nav {
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      white-space: nowrap;
+      overflow-x: auto;
+    }
+
+    nav a {
+      display: block;
+      padding: 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .9rem;
+      color: #1a73e8;
+    }
+
+    nav a:hover {
+      background: #e3f2fd;
+    }
+
+    /* MAIN CONTENT */
+    main {
+      padding: 1rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section { display: none; }
+    section.active { display: block; }
+
+    .card {
+      background: #fff;
+      padding: 1.2rem;
+      border-radius: 14px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    img {
+      width: 100%;
+      background: #fff;
+      border-radius: 14px;
+      object-fit: cover;
+      margin: 1rem 0;
+      padding: .5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h2 { color: #0d47a1; margin-bottom: .6rem; }
+    h3 { margin-top: 1rem; color: #1a73e8; }
+    ul { padding-left: 1.2rem; margin-top: .6rem; }
+
+    footer {
+      background: #0d47a1;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: .8rem;
+      margin-top: 2rem;
+    }
+
+    /* DESKTOP */
+    @media (min-width: 768px) {
+      header h1 { font-size: 2rem; }
+      nav a { font-size: 1rem; }
+      img { max-height: 380px; }
+    }
+
+    /* MOBILE FIXES */
+    @media (max-width: 768px) {
+      nav ul { 
+        flex-direction: column; 
+        align-items: flex-start; 
+      }
+
+      nav a {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Tinig ng Bayan</h1>
+  <p>Understanding Local Political Issues in the Philippines</p>
+</header>
+
+<nav id="navbar">
+  <ul>
+    <li><a href="#" onclick="showTab('home')">Home</a></li>
+    <li><a href="#" onclick="showTab('profile')">Website Owner's Profile</a></li>
+    <li><a href="#" onclick="showTab('analysis')">Analysis / The Issues</a></li>
+    <li><a href="#" onclick="showTab('solutions')">Solutions / Recommendations</a></li>
+    <li><a href="#" onclick="showTab('sources')">Sources</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- HOME -->
+  <section id="home" class="active">
+    <div class="card">
+      <h2>Welcome</h2>
+      <img src="Philippine - Flag.png" alt="Philippine Flag">
+      <p>Welcome to <strong>Tinig ng Bayan</strong>, a student-made informational website...</p>
+    </div>
+
+    <div class="card">
+      <h3>Purpose of the Website</h3>
+      <ul>
+        <li>To explain current local political issues in a simple way</li>
+        <li>To encourage responsible participation in governance</li>
+        <li>To present possible solutions and recommendations</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROFILE -->
+  <section id="profile">
+    <div class="card">
+      <h2>Website Owner's Profile</h2>
+      <p><strong>Name:</strong> (Your Name Here)</p>
+      <p><strong>School:</strong> (Your School Name)</p>
+      <p><strong>Course / Grade:</strong> (Your Grade or Course)</p>
+      <p><strong>Purpose:</strong> This website was created for academic purposes.</p>
+    </div>
+  </section>
+
+  <!-- ANALYSIS -->
+  <section id="analysis">
+    <div class="card">
+      <h2>Analysis / The Issues</h2>
+      <img src="Philippine - Local - Election.png" alt="Philippine Local Election">
+      <h3>1. Political Dynasties</h3>
+      <p>Many LGUs are controlled by political families...</p>
+
+      <h3>2. Vote Buying</h3>
+      <p>Vote buying remains a serious problem...</p>
+
+      <img src="Philippines - Goverment.png" alt="Local Government Philippines" style="border-radius:12px; margin:1rem 0; width:auto; height:auto;">
+      <h3>3. Corruption in Local Government</h3>
+      <p>Some local officials misuse public funds...</p>
+
+      <h3>4. Lack of Youth Participation</h3>
+      <p>Many young Filipinos are not actively involved...</p>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS -->
+  <section id="solutions">
+    <div class="card">
+      <h2>Solutions / Recommendations</h2>
+      <ul>
+        <li>Strict enforcement of anti-dynasty laws</li>
+        <li>Stronger voter education campaigns</li>
+        <li>Digital platforms for transparency</li>
+        <li>More youth participation through SK</li>
+        <li>Responsible use of social media</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SOURCES -->
+  <section id="sources">
+    <div class="card">
+      <h2>Sources (Credible & Reliable)</h2>
+      <ul>
+        <li>Commission on Elections (COMELEC). Official Website.</li>
+        <li>Philippine Center for Investigative Journalism (PCIJ).</li>
+        <li>Official Gazette of the Philippines.</li>
+        <li>Transparency International – Corruption Perceptions Index.</li>
+        <li>University of the Philippines – National College of Public Administration.</li>
+      </ul>
+      <p style="margin-top:1rem; font-size:.85rem;">All sources are used for educational purposes only.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Tinig ng Bayan | Educational Use Only</p>
+</footer>
+
+<script>
+  // --- TAB SWITCHING ---
+  function showTab(tabId) {
+    document.querySelectorAll("main section").forEach(s => s.classList.remove("active"));
+    document.getElementById(tabId).classList.add("active");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // --- AUTO-HIDE NAVBAR ON SCROLL ---
+  let lastScroll = 0;
+  const nav = document.getElementById("navbar");
+
+  window.addEventListener("scroll", () => {
+    const current = window.scrollY || window.pageYOffset;
+
+    if (current > lastScroll && current > nav.offsetHeight) {
+      // scrolling down
+      nav.style.transform = `translateY(-${nav.offsetHeight}px)`;
+    } else {
+      // scrolling up
+      nav.style.transform = 'translateY(0)';
+    }
+
+    lastScroll = current;
+  });
+
+  // ensure smooth transition
+  nav.style.transition = 'transform 0.3s ease';
+</script>
+
+</body>
+</html>
